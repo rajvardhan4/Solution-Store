@@ -1,18 +1,24 @@
 # Solution Store
 
-A light, responsive product storefront with dedicated Chat Pilot and HRM Pilot pages.
+Next.js App Router storefront built with React and Motion.
 
-## Preview
-Open index.html in a browser, or serve this directory with a static HTTP server.
+## Development
+Requires Node.js 22+ (CI uses 24). Run `npm ci`, then `npm run dev`.
 
-## GitHub Pages
-In repository Settings > Pages, choose GitHub Actions. The included Deploy Solution Store workflow publishes all root HTML pages and assets on pushes to main.
+## Production
+Run `npm run build` to generate the static site in `out/`. The GitHub Actions workflow sets `NEXT_PUBLIC_BASE_PATH=/Solution-Store` and deploys the Next.js export to GitHub Pages. For a root-domain host, omit this variable before building.
 
-## Product pages
-- chat-pilot.html: features, introductory pricing (INR 999/month), and https://appchatpilot.vercel.app/login
-- hrm.html: features, introductory pricing (INR 1,499/month), and https://mediumvioletred-fox-353008.hostingersite.com/
+## Source structure
+- `app/`: homepage, shared layout, product routes and 404.
+- `components/`: reusable header, footer, catalogue, previews, product details, theme and motion controls.
+- `lib/products.js`: product content, categories, prices and live portal URLs.
+- `public/assets/`: brand logos.
+- `scripts/postbuild.mjs`: GitHub Pages metadata and redirects for old product URLs.
 
-Homepage product links open internal detail pages. Documentation links are not used. Preview interfaces are illustrative. Online checkout is not configured.
+## Products
+- `/products/chat-pilot/`: introductory INR 999/month.
+- `/products/hrm/`: introductory INR 1,499/month.
 
-## Design
-Original light design with coral accents, blue and peach sculptural visuals, responsive layouts, scroll reveals and reduced-motion support. No paid template code or assets are included.
+Dark/light themes, React search and filtering, Motion scroll progress and word reveals, CSS 3D brand cube and rings, card tilt, motion pause and reduced-motion support. All homepage product links stay within the store. Actual application links appear on detail pages. Interface previews are illustrative. Online checkout is not configured.
+
+GitHub Pages serves the static export. Future server-side authentication, APIs and payments require a server-capable host such as Vercel.
