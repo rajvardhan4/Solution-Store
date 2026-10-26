@@ -1,32 +1,18 @@
 # Solution Store
 
-A responsive, futuristic storefront showcasing Chat Pilot and HRM.
+A light, responsive product storefront with dedicated Chat Pilot and HRM Pilot pages.
 
 ## Preview
+Open index.html in a browser, or serve this directory with a static HTTP server.
 
-Open `index.html` in a browser. No installation or build step is needed.
+## GitHub Pages
+In repository Settings > Pages, choose GitHub Actions. The included Deploy Solution Store workflow publishes all root HTML pages and assets on pushes to main.
 
-## Publish with GitHub Pages
+## Product pages
+- chat-pilot.html: features, introductory pricing (INR 999/month), and https://appchatpilot.vercel.app/login
+- hrm.html: features, introductory pricing (INR 1,499/month), and https://mediumvioletred-fox-353008.hostingersite.com/
 
-1. Push these files to `rajvardhan4/Solution-Store` on `main`.
-2. In repository **Settings → Pages**, choose **GitHub Actions** as the source.
-3. Run the **Deploy Solution Store** workflow, or push a change to `main`.
-4. Use the deployment URL returned by the successful workflow.
+Homepage product links open internal detail pages. Documentation links are not used. Preview interfaces are illustrative. Online checkout is not configured.
 
-The workflow publishes only `index.html`, `.nojekyll`, and `assets/`.
-
-## Products
-
-- Chat Pilot: https://chat-pilot.edgeone.dev/
-- HRM: https://mediumvioletred-fox-353008.hostingersite.com/
-- HRM documentation: https://mediumvioletred-fox-353008.hostingersite.com/documentation.html
-
-Product interface previews are illustrative. Pricing, payment processing and sales contact details have not been configured.
-
-## Features
-
-Responsive layout, product search, category filters, product dialogs, animated orbital hero, scroll reveals, motion pause control, reduced-motion support and keyboard focus styles.
-
-## Assets
-
-The logo is an original generated Solution Store mark. Google Fonts are loaded from the public Google Fonts service; system sans-serif fallbacks are included.
+## Design
+Original light design with coral accents, blue and peach sculptural visuals, responsive layouts, scroll reveals and reduced-motion support. No paid template code or assets are included.
